@@ -1,0 +1,18 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: projeto_umbanda_mysql
+    restart: unless-stopped
+
+    environment:
+      MYSQL_ROOT_PASSWORD: senha_segura
+      MYSQL_DATABASE: projeto_umbanda
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - dados_mysql:/var/lib/mysql
+
+volumes:
+  dados_mysql:
