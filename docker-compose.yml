@@ -5,8 +5,8 @@ services:
     restart: unless-stopped
 
     environment:
-      MYSQL_ROOT_PASSWORD: senha_segura
-      MYSQL_DATABASE: projeto_umbanda
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
 
     ports:
       - "3306:3306"
